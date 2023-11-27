@@ -1,0 +1,61 @@
+---
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.5.0
+  hooks:
+  - id: trailing-whitespace
+    exclude: \.snap$
+  - id: end-of-file-fixer
+    exclude: ^\.idea
+  - id: check-case-conflict
+  - id: check-merge-conflict
+  - id: check-yaml
+  - id: check-toml
+  - id: check-added-large-files
+  - id: mixed-line-ending
+
+- repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+  rev: 2.7.3
+  hooks:
+  - id: editorconfig-checker
+    exclude_types:
+    - ts
+    - json
+    - java
+    - javascript
+    - toml
+    - yaml
+    - xml
+    - markdown
+    - kotlin
+    exclude: LICENSE|gradlew.bat
+- repo: https://github.com/python-jsonschema/check-jsonschema
+  rev: 0.27.2
+  hooks:
+  - id: check-github-workflows
+  - id: check-renovate
+#- repo: https://github.com/Lucas-C/pre-commit-hooks
+#  rev: v1.5.4
+#  hooks:
+#  - id: insert-license
+#    types:
+#    - kotlin
+#    exclude: .*/gitversion/.*
+#    args:
+#    - --use-current-year
+#    - --license-filepath
+#    - .license-header
+#    - --comment-style
+#    - '/*| *| */'
+#- repo: https://github.com/jguttman94/pre-commit-gradle
+#  rev: v0.3.0  # Use the ref you want to point at
+#  hooks:
+#  - id: gradle-check
+#    args:
+#    - -w
+#
+#ci:
+#  skip:
+#  - gradle-check
