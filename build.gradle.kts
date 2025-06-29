@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
   implementation(platform("io.opentelemetry:opentelemetry-bom:1.32.0"))
-  implementation(platform("io.opentelemetry.instrumentation:opentelemetry-instrumentation-bom:1.32.0"))
+  implementation(platform("io.opentelemetry.instrumentation:opentelemetry-instrumentation-bom:1.33.6"))
   implementation(platform("io.opentelemetry.instrumentation:opentelemetry-instrumentation-bom-alpha:1.32.0-alpha"))
 
   implementation("com.google.guava:guava:32.1.3-jre")
