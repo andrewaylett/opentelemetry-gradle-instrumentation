@@ -22,7 +22,7 @@ dependencies {
   implementation("com.google.guava:guava:32.1.3-jre")
   implementation("io.opentelemetry:opentelemetry-api:1.32.0")
   implementation("io.opentelemetry.semconv:opentelemetry-semconv:1.23.1-alpha")
-  implementation("org.slf4j:slf4j-api:2.0.9")
+  implementation("org.slf4j:slf4j-api:2.0.19")
 
   compileOnly("net.bytebuddy:byte-buddy:1.14.10")
 
